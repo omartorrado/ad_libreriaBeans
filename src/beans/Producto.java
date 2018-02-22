@@ -23,8 +23,15 @@ public class Producto implements Serializable {
 
     public Producto() {
         propertySupport = new PropertyChangeSupport(this);
-        stockminimo = 0;
-        stockactual = 5;
+    }
+
+    public Producto(String descripcion, int idproducto, int stockminimo, float pvp, int stockactual) {
+        this.descripcion = descripcion;
+        this.idproducto = idproducto;
+        this.stockminimo = stockminimo;
+        this.pvp = pvp;
+        this.stockactual = stockactual;
+        propertySupport = new PropertyChangeSupport(this);
     }
 
     public String getDescripcion() {
