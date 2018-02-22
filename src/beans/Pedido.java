@@ -22,15 +22,14 @@ public class Pedido implements Serializable, PropertyChangeListener {
     private boolean pedir;
 
     public Pedido() {
-        
+
     }
 
-    public Pedido(int numeropedido, int idproducto, Date fecha, int cantidad, boolean pedir) {
+    public Pedido(int numeropedido, int idproducto, Date fecha, int cantidad) {
         this.numeropedido = numeropedido;
         this.idproducto = idproducto;
         this.fecha = fecha;
         this.cantidad = cantidad;
-        this.pedir = pedir;
     }
 
     public int getNumeropedido() {
@@ -71,7 +70,7 @@ public class Pedido implements Serializable, PropertyChangeListener {
 
     public void setPedir(boolean pedir) {
         this.pedir = pedir;
-    }   
+    }
 
     @Override
     public void propertyChange(PropertyChangeEvent pce) {
